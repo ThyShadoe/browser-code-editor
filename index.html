@@ -4,21 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Code Editor</title>
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
   </head>
   <body>
     <header>
       <!--Top Bar-->
       <div class="container row">
-        <div class="logo"></div>
-        <div class="title">Browser Code Editor</div>
+        <div class="brand">
+          <div class="logo"></div>
+          <div class="title">Browser Code Editor</div>
+        </div>
+        <div class="row">
+          <button class="btn secondary" id="saveBtn" title="Save your work locally"><span>Save</span></button>
+          <button class="btn secondary" id="loadBtn" title="Load work file"><span>Load</span></button>
+          <input id="openFile" type="file" accept="application/json" hidden>
+        </div>
       </div>
 
-      <div class="row">
-        <button class="btn secondary" id="saveBtn" title="Save your work locally"><span>Save</span></button>
-        <button class="btn secondary" id="loadBtn" title="Load work file"><span>Load</span></button>
-        <input id="openFile" type="file" accept="application/json" hidden>
-      </div>
     </header>
 
     <main>
@@ -43,7 +45,7 @@
       <!--Main Editor-->
       <section class="stack" id="web-only">
 
-        <div id="webEditors" class="stack panel card">
+        <div id="webEditors" class="stack card panel">
           <div class="row">
             <h2>HTML / CSS / JS</h2>
             <div class="row">
@@ -51,29 +53,29 @@
               <button class="btn secondary" id="openPreview">Open Preview in New Tab</button>
             </div>
           </div>
-        </div>
 
-        <div class="tabs" id="webTabs" role="tablist" aria-label="web editors">
-          <button class="tab active" role="tab" aria-selected="true" tabindex="0" data-pane="html">HTML</button>
-          <button class="tab" role="tab" aria-selected="false" tabindex="-1" data-pane="css">CSS</button>
-          <button class="tab" role="tab" aria-selected="false" tabindex="-1" data-pane="js">JavaScript</button>
-        </div>
+          <div class="tabs" id="webTabs" role="tablist" aria-label="web editors">
+            <button class="tab active" role="tab" aria-selected="true" tabindex="0" data-pane="html">HTML</button>
+            <button class="tab" role="tab" aria-selected="false" tabindex="-1" data-pane="css">CSS</button>
+            <button class="tab" role="tab" aria-selected="false" tabindex="-1" data-pane="js">JavaScript</button>
+          </div>
 
-        <div class="editor-wrap" data-pane="html">
-          <div id="ed_html" class="editor"></div>
-        </div>
+          <div class="editor-wrap" data-pane="html">
+            <div id="ed_html" class="editor"></div>
+          </div>
 
-        <div class="editor-wrap" data-pane="css" hidden>
-          <div id="ed_css" class="editor"></div>
-        </div>
+          <div class="editor-wrap" data-pane="css" hidden>
+            <div id="ed_css" class="editor"></div>
+          </div>
 
-        <div class="editor-wrap" data-pane="js" hidden>
-          <div id="ed_js" class="editor"></div>
-        </div>
+          <div class="editor-wrap" data-pane="js" hidden>
+            <div id="ed_js" class="editor"></div>
+          </div>
 
-        <div class="stack">
-          <h3>Preview</h3>
-          <iframe id="preview" class="preview" sandbox="allow-scripts allow-same-origin allow-modals allow-forms"></iframe>
+          <div class="stack">
+            <h3>Preview</h3>
+            <iframe id="preview" class="preview" sandbox="allow-scripts allow-same-origin allow-modals allow-forms"></iframe>
+          </div>
         </div>
 
       </section>
@@ -95,6 +97,6 @@
     </main>
 
     <div class="footer">Browser Code Editor</div>
-
+    <script src="js/script.js"></script>
   </body>
 </html>

@@ -13,6 +13,6 @@ A code editor for HTML, CSS and JavaScript that can be used inside a browser.
 
 ## To Do
 
-- [] make a light and dark theme switcher
-- [] enable vim keybindings
-- [] allow different color themes
+- [ ] make a light and dark theme switcher
+- [ ] allow different color themes
+- [ ] allow vim keybindings

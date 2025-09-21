@@ -6,10 +6,10 @@
   --txt: #e9ecf1;
   --brand: #7dd3fc;
   --brand-2: #60a5fa;
-  --ok: #22c55e;
-  --warn: #eab308;
-  --err: #ef4444;
-  --radius: 18px;
+  --ok: #34d399;
+  --warn: #f59e0b;
+  --err: #fb7185;
+  --radius: 0px;
   --gap: 14px;
 }
 
@@ -19,7 +19,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -31,7 +32,11 @@ body {
 
 header {
   padding: 20px;
-  background: linear-gradient(90deg, rgba(96, 165, 250, 0.15), rgba(125, 211, 252, 0.1));
+  background: linear-gradient(
+    90deg,
+    rgba(96, 165, 250, 0.15),
+    rgba(125, 211, 252, 0.1)
+  );
   border-bottom: 2px solid rgba(255, 255, 255, 0.06);
 }
 
@@ -55,7 +60,7 @@ header {
   border-radius: 18px;
   /* TODO: Change the logo here later */
   background: url("https://programming-ocean.com/code-editors/newlogo.png")
-  center / cover no-repeat;
+    center / cover no-repeat;
 }
 
 .title {
@@ -78,17 +83,22 @@ main {
 }
 
 .card {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.03));
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.03)
+  );
   border: 2px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); */
 }
 
 .panel {
   padding: 16px;
 }
 
-h2, h3 {
+h2,
+h3 {
   margin: 0 0 12px;
 }
 
@@ -121,4 +131,133 @@ h2, h3 {
   border: 12px;
   cursor: pointer;
   /* box-shadow: 0 10px 24px rgba(96, 165, 250, 0.25); */
+}
+
+.btn.secondary {
+  background: transparent;
+  border:
+    2px solid,
+    rgba(255, 255, 255, 0.15);
+  color: var(--txt);
+  box-shadow: none;
+}
+
+.btn.warn {
+  background: var(--warn);
+  border:
+    2px solid,
+    rgba(0, 0, 0, 0.3);
+}
+
+.btn.ok {
+  background: var(--ok);
+  border:
+    2px solid,
+    rgba(0, 0, 0, 0.3);
+}
+
+.btn.err {
+  background: var(--err);
+  border:
+    2px solid,
+    rgba(0, 0, 0, 0.3);
+}
+
+.select,
+select,
+.text {
+  background: rgba(255, 255, 255, 0.03);
+  border:
+    2px solid,
+    rgba(255, 255, 255, 0.12);
+  color: var(--txt);
+  padding: 10px 12px;
+}
+
+textarea.text {
+  width: 100%;
+  min-height: 120px;
+}
+
+.tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tab {
+  padding: 8px 12px;
+  border:
+    2px solid,
+    rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.03);
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--txt);
+}
+
+.tab.active {
+  background: linear-gradient(
+    180deg,
+    rgba(125, 211, 252, 0.18),
+    rgba(95, 165, 250, 0.18)
+  );
+  color: #00ff00 !important;
+}
+
+.editor-wrap {
+  background: var(--body-bg);
+  position: relative;
+  border:
+    2px solid,
+    rgba(255, 255, 255, 0.15);
+  overflow: hidden;
+  min-height: 280px;
+}
+
+.editor {
+  inline-size: 100%;
+  block-size: 380px;
+}
+
+iframe.preview {
+  inline-size: 100%;
+  block-size: 380px;
+  border:
+    2px solid,
+    rgba(0, 0, 0, 0.15);
+  background: #ffffff;
+}
+
+.out {
+  background: var(--body-bg);
+  border:
+    2px solid,
+    rgba(255, 255, 255, 0.15);
+  padding: 10px;
+  min-height: 160px;
+  overflow: auto;
+  white-space: pre-wrap;
+}
+
+.footer {
+  opacity: 0.7;
+  font-size: 12px;
+  text-align: center;
+  padding: 12px;
+}
+
+.kbd {
+  font-family:
+    ui-monospace, SFMono-Regular, Menlo, Consolas, "Cascadia Code", monospace;
+  background: var(--bg);
+  border:
+    2px solid,
+    rgba(255, 255, 255, 0.15);
+  padding: 2px 6px;
+}
+
+.label {
+  font-size: 13px;
+  color: var(--muted);
 }

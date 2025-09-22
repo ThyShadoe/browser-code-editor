@@ -1,14 +1,16 @@
+@import "nord.css";
+
 :root {
-  --bg: #0f1221;
+  --bg: var(--nord0);
   --body-bg: #0b0f1d;
   --panel: #14182b;
-  --muted: #8b93a7;
-  --txt: #e9ecf1;
-  --brand: #7dd3fc;
-  --brand-2: #60a5fa;
-  --ok: #34d399;
-  --warn: #f59e0b;
-  --err: #fb7185;
+  --muted: var(--nord4);
+  --txt: var(--nord4);
+  --brand: var(--nord8);
+  --brand-2: var(--nord10);
+  --ok: var(--nord14);
+  --warn: var(--nord12);
+  --err: var(--nord11);
   --radius: 0px;
   --gap: 14px;
 }
@@ -26,17 +28,13 @@ body {
 
 body {
   font-family: sans-serif;
-  background: linear-gradient(180deg, var(--body-bg), var(--bg) 35%);
+  background: var(--bg);
   color: var(--txt);
 }
 
 header {
   padding: 20px;
-  background: linear-gradient(
-    90deg,
-    rgba(96, 165, 250, 0.15),
-    rgba(125, 211, 252, 0.1)
-  );
+  background: var(--nord1);
   border-bottom: 2px solid rgba(255, 255, 255, 0.06);
 }
 
@@ -57,10 +55,9 @@ header {
 .brand .logo {
   inline-size: 32px;
   block-size: 36px;
-  border-radius: 18px;
+  border-radius: 8px;
   /* TODO: Change the logo here later */
-  background: url("https://programming-ocean.com/code-editors/newlogo.png")
-    center / cover no-repeat;
+  background: url("../logo.webp") center / cover no-repeat;
 }
 
 .title {
@@ -83,11 +80,7 @@ main {
 }
 
 .card {
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.05),
-    rgba(255, 255, 255, 0.03)
-  );
+  background: var(--nord1);
   border: 2px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius);
   /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); */
@@ -105,6 +98,7 @@ h3 {
 .muted {
   color: var(--muted);
   font-size: 13px;
+  line-height: 1.75;
 }
 
 .stack {
@@ -197,11 +191,10 @@ textarea.text {
 }
 
 .tab.active {
-  background: linear-gradient(
-    180deg,
-    rgba(125, 211, 252, 0.18),
-    rgba(95, 165, 250, 0.18)
-  );
+  background: var(--nord1);
+  border:
+    2px solid,
+    var(--ok);
   color: var(--ok) !important;
 }
 
@@ -230,7 +223,7 @@ iframe.preview {
 }
 
 .out {
-  background: var(--body-bg);
+  background: var(--nord0);
   border:
     2px solid,
     rgba(255, 255, 255, 0.15);
@@ -260,4 +253,8 @@ iframe.preview {
 .label {
   font-size: 13px;
   color: var(--muted);
+}
+
+ul {
+  padding: 0px 20px;
 }

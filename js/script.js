@@ -47,7 +47,7 @@ $("#clearOut")?.addEventListener("click", clearOut);
 // ================== ACE Editors (HTML/CSS/JS) ==================
 function makeEditor(id, mode) {
   const ed = ace.edit(id, {
-    theme: "ace/theme/dracula",
+    theme: "ace/theme/nord_dark",
     mode,
     tabSize: 2,
     useSoftTabs: true,
@@ -223,7 +223,7 @@ function setDefaultContent() {
   ed_html.setValue(
     `<!-- Welcome card -->
 <section class="card" style="max-width:520px;margin:24px auto;padding:18px;text-align:center">
-  <h1>Welcome to the Academy</h1>
+  <h1>Heading</h1>
   <p>This example runs locally in the browser.</p>
   <button id="btn">Try me</button>
 </section>`,
@@ -251,9 +251,9 @@ function saveProject() {
     const blob = new Blob([data], { type: "application/json" });
     const a = document.createElement("a");
     a.href = URL.createObjectURL(blob);
-    a.download = "academy-web.json";
+    a.download = "code-project.json";
     a.click();
-    log("Saved locally and downloaded JSON file.");
+    log("JSON has been saved locally.");
   } catch (e) {
     log("Unable to save: " + e, "error");
   }
@@ -284,7 +284,7 @@ try {
   setDefaultContent();
 }
 
-log("Ready — Web-only Editor (HTML/CSS/JS) ✨");
+log("Ready — Web-only Editor (HTML/CSS/JS)");
 
 function normalizeProject(raw) {
   if (!raw || typeof raw !== "object") throw new Error("Not an object");

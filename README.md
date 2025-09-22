@@ -1,18 +1,24 @@
 # browser-code-editor
 
+!> [!IMPORTANT]
+
+> This is a Personal Project. This project was based from a video at [freeCodeCamp](https://www.youtube.com/watch?v=Vs4hQsDpxww).
+
 A code editor for HTML, CSS and JavaScript that can be used inside a browser.
 
 ## Features
 
-- A full code editor with HTML, CSS, and JavaScript, fully accessible
-  inside a browser.
-- A preview that allows you to view your updates, and also allow you
-  to open the preview in a separate window or tab.
-- Saving your work as a JSON file, and an option to load existing JSON
-  files to the editor for quick editing.
+- Full code editor for HTML, CSS and JavaScript, all within your browser.
+- A preview to check your updates, and also allows you to open the preview
+  in a separate window or tab.
+- Saving your work to a JSON file locally on your computer.
+- Loading created or already existing JSON files from your computer to the
+  editor.
 
 ## To Do
 
-- [ ] make a light and dark theme switcher
-- [ ] allow different color themes
-- [ ] allow vim keybindings
+- [ ] Light theme
+- [ ] Toggle for dark and light theme
+- [ ] Support for multiple themes (dracula, tokyo night, gruvbox, etc.)
+- [ ] Support for alternative key-bindings (vim, emacs, vscode)
+- [ ] Support for more programming languages

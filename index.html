@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Code Editor</title>
+    <link href="https://cdnjs.cloudflare.com" rel="preconnect" crossorigin />
+    <link href="https://cdn.jsdelivr.net" rel="preconnect" crossorigin />
     <link href="css/styles.css" rel="stylesheet" />
   </head>
 
@@ -139,7 +141,7 @@
         </div>
         <h3>Notes</h3>
         <ul class="muted">
-          <li class="label">Everything runs in the browser.</li>
+          <li class="label">This code editor runs in the browser.</li>
           <li class="label">
             You can save your work as a JSON file and restore it.
           </li>
@@ -148,6 +150,15 @@
     </main>
 
     <div class="footer">For Educational Purposes Only.</div>
+
+    <!-- ACE EDITOR -->
+    <script
+      scr="https://cdnjs.cloudflare.com/ajax/libs/ace/1.43.3/ace.js"
+      integrity="sha512-T2otaV2NuxAJAOCoj8ijyy+eAAadZlpvdLmakrIGVFbBkthgIFqLTXd+T8Z+S+kf4V7Ib5+6f6r4D4IdS9Ey4A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+      onerror="(function(){var s=document.createdElement('script'); s.src='https://cdn.jsdelivr.net/npm/ace-builds@1.43.3/src-min/ace.js'; document.head.appendChild(s);}())"
+    ></script>
     <script src="js/script.js"></script>
   </body>
 </html>

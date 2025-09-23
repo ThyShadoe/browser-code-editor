@@ -3,7 +3,8 @@
 > [!IMPORTANT]
 > This is a Personal Project. This project was based from a video at [freeCodeCamp](https://www.youtube.com/watch?v=Vs4hQsDpxww).
 
-A code editor for HTML, CSS and JavaScript that can be used inside a browser.
+A full browser-based code editor for HTML, CSS, and JavaScript, complete
+with a preview pane with saving and loading.
 
 ## Features
 

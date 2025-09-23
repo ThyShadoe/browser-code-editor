@@ -223,7 +223,7 @@ function setDefaultContent() {
   ed_html.setValue(
     `<!-- Welcome card -->
 <section class="card" style="max-width:520px;margin:24px auto;padding:18px;text-align:center">
-  <h1>Heading</h1>
+  <h1>Welcome</h1>
   <p>This example runs locally in the browser.</p>
   <button id="btn">Try me</button>
 </section>`,
@@ -284,7 +284,7 @@ try {
   setDefaultContent();
 }
 
-log("Ready — Web-only Editor (HTML/CSS/JS)");
+log("Ready.");
 
 function normalizeProject(raw) {
   if (!raw || typeof raw !== "object") throw new Error("Not an object");
